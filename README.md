@@ -6,10 +6,13 @@
 
 ## Ответ 1
 
+```
 
 SELECT DISTINCT district
 FROM sakila.address
 WHERE district LIKE 'K%a' AND district NOT LIKE '% %';
+
+```
 
 <img src = "img/img101.png" width = 100%>
 
@@ -36,9 +39,13 @@ WHERE payment_date >= '2005-06-15'
 
 ## Ответ 3
 
+```
+
 SELECT * FROM sakila.rental
 ORDER BY rental_date DESC
 LIMIT 5;
+
+```
 
 <img src = "img/img103.png" width = 100%>
 
@@ -56,14 +63,24 @@ LIMIT 5;
 
 Приводем к нижнему ренистру имена и фамилии с помощью
 
+```
+
 LOWER(first_name) AS first_name,
 LOWER(last_name) AS last_name,
 
+```
+
 Заменим буквы ll на pp
+
+```
 
 REPLACE(LOWER(first_name), 'll', 'pp') AS modified_first_name,
 
+```
+
 В итоге получим следующий запрос
+
+```
 
 SELECT 
 	LOWER(first_name) AS first_name,
@@ -73,5 +90,7 @@ SELECT
 FROM sakila.customer
 WHERE first_name IN ('Kelly', 'Willie')
 	AND active = 1;
+
+```
 
 <img src = "img/img104.png" width = 100%>
