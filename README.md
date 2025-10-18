@@ -19,12 +19,14 @@ WHERE district LIKE 'K%a' AND district NOT LIKE '% %';
 
 ## Ответ 2
 
+```
 
 SELECT * FROM sakila.payment
 WHERE payment_date >= '2005-06-15'
 	AND payment_date <= '2005-06-18'
     AND amount > 10.00;
 
+```
 
 <img src = "img/img102.png" width = 100%>
 
